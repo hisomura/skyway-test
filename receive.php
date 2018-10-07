@@ -10,8 +10,27 @@
 
     <style>
         .modal_button {
-            padding: 0.5em 1em;
+            display: block;
+            padding: 0.5em 0;
             border: none;
+            border-radius: 20px;
+            font-size: 4em;
+            color: white;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            margin: 2em auto;
+            width: 40%;
+        }
+
+        #accept-call {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        #refuse-call {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .buttons {
+            margin: 3em auto;
         }
     </style>
 </head>
@@ -42,10 +61,12 @@
 </div>
 
 <a href="#modal" class="modal">Show</a>
-<div id="modal" style="display:none;">
-    <p>通話要求が来ています。通話を開始しますか。</p>
-    <button id="accept-call" class="pure-button-success modal_button" type="button">OK</button>
-    <button id="refuse-call" class="pure-button-error modal_button" type="button">NO</button>
+<div id="modal" style="display:none; margin:0 auto">
+    <p style="font-size: 2em; text-align: center">通話要求が来ています。通話を開始しますか。</p>
+    <div class="buttons">
+        <button id="accept-call" class="modal_button" type="button">OK</button>
+        <button id="refuse-call" class="modal_button" type="button">NO</button>
+    </div>
 </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
