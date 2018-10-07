@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head lang="ja">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>SkyWay JS SDK Tutorial</title>
-    <meta name="skyway-api-key" content="<?php require_once __DIR__ . '/utils.php'; echo get_skyway_api_key(); ?>">
+    <meta name="skyway-api-key" content="<?php require_once __DIR__ . '/utils.php';
+    echo get_skyway_api_key(); ?>">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/modaal.min.css">
 </head>
 <div class="pure-g">
 
@@ -32,7 +34,17 @@
     </div>
 </div>
 
+<a href="#modal" class="modal">Show</a>
+<div id="modal" style="display:none;">
+    <p>これはサンプルです。</p>
+    <button id="accept-call" type="button">OK</button>
+</div>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/modaal.min.js"></script>
+<script>
+    $('.modal').modaal();
+</script>
 <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 <script type="text/javascript" src="receive.js"></script>
 </html>
