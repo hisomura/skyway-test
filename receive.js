@@ -47,11 +47,16 @@ $('#end-call').click(function () {
 
 // 着信
 peer.on('call', function (call) {
-  console.log('aiueoooooooo')
   $('.modal').modaal('open');
   $('#accept-call').on('click', function () {
     call.answer(localStream);
     setupCallEventHandlers(call);
+    $('.modal').modaal('close');
+  });
+
+  $('#refuse-call').on('click', function () {
+    call.close();
+    $('.modal').modaal('close');
   });
 });
 

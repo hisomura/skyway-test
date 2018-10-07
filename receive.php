@@ -7,6 +7,13 @@
     echo get_skyway_api_key(); ?>">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/modaal.min.css">
+
+    <style>
+        .modal_button {
+            padding: 0.5em 1em;
+            border: none;
+        }
+    </style>
 </head>
 <div class="pure-g">
 
@@ -36,8 +43,9 @@
 
 <a href="#modal" class="modal">Show</a>
 <div id="modal" style="display:none;">
-    <p>これはサンプルです。</p>
-    <button id="accept-call" type="button">OK</button>
+    <p>通話要求が来ています。通話を開始しますか。</p>
+    <button id="accept-call" class="pure-button-success modal_button" type="button">OK</button>
+    <button id="refuse-call" class="pure-button-error modal_button" type="button">NO</button>
 </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
